@@ -1,0 +1,92 @@
+[
+  {
+    "book_id": "978-0-7432-7356-5",
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "publisher": "Scribner",
+    "year": 1925,
+    "category": "Fiction",
+    "price": 14.99,
+    "stock": 9
+  },
+  {
+    "book_id": "978-0-06-112008-4",
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "publisher": "Harper Perennial",
+    "year": 1960,
+    "category": "Fiction",
+    "price": 16.99,
+    "stock": 8
+  },
+  {
+    "book_id": "978-0-14-028329-7",
+    "title": "1984",
+    "author": "George Orwell",
+    "publisher": "Penguin Books",
+    "year": 1949,
+    "category": "Dystopian Fiction",
+    "price": 13.99,
+    "stock": 13
+  },
+  {
+    "book_id": "978-0-7432-7357-2",
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "publisher": "Penguin Classics",
+    "year": 1813,
+    "category": "Romance",
+    "price": 12.99,
+    "stock": 5
+  },
+  {
+    "book_id": "978-0-316-76948-0",
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "publisher": "Little, Brown and Company",
+    "year": 1951,
+    "category": "Fiction",
+    "price": 15.99,
+    "stock": 7
+  },
+  {
+    "book_id": "978-0-7432-7358-9",
+    "title": "Brave New World",
+    "author": "Aldous Huxley",
+    "publisher": "Harper Perennial",
+    "year": 1932,
+    "category": "Dystopian Fiction",
+    "price": 14.49,
+    "stock": 6
+  },
+  {
+    "book_id": "978-0-14-028330-3",
+    "title": "Animal Farm",
+    "author": "George Orwell",
+    "publisher": "Penguin Books",
+    "year": 1945,
+    "category": "Political Satire",
+    "price": 11.99,
+    "stock": 11
+  },
+  {
+    "book_id": "978-0-7432-7359-6",
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "publisher": "HarperOne",
+    "year": 1988,
+    "category": "Adventure",
+    "price": 15.49,
+    "stock": 9
+  },
+  {
+    "book_id": "978-0-14-028331-0",
+    "title": "Harry Potter and the Philosopher Stone",
+    "author": "J.K. Rowling",
+    "publisher": "Bloomsbury",
+    "year": 1997,
+    "category": "Fantasy",
+    "price": 18.99,
+    "stock": 20
+  }
+]

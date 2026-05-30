@@ -1,0 +1,23 @@
+[
+  {
+    "invoice_id": "INV0001",
+    "order_id": "ORD0001",
+    "customer_id": "CUST0002",
+    "customer_name": "s",
+    "customer_address": "aa",
+    "items": [
+      {
+        "book_id": "978-0-7432-7356-5",
+        "title": "The Great Gatsby",
+        "quantity": 1,
+        "unit_price": 14.99,
+        "line_total": 14.99
+      }
+    ],
+    "subtotal": 14.99,
+    "gst": 1.5,
+    "total": 16.49,
+    "created_at": "2026-05-30T23:55:57.442766",
+    "status": "unpaid"
+  }
+]
