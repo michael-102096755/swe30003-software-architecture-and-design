@@ -1,0 +1,394 @@
+    /* SWE30003 - Assignment 3 - CSS for our System's Frontend - Michael Attardi - 102096755 */
+    /* - Variables - */
+    :root {
+      --bg:        #f5f0e8;
+      --bg-card:   #fdfaf4;
+      --ink:       #1a1410;
+      --ink-light: #6b5f52;
+      --accent:    #c0392b;
+      --accent-bg: #fdf0ee;
+      --border:    #d9d0c0;
+      --success:   #2e7d32;
+      --mono:      'DM Mono', monospace;
+      --serif:     'Playfair Display', Georgia, serif;
+    }
+
+    /* - Reset & Base - */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--mono);
+      font-size: 14px;
+      min-height: 100vh;
+    }
+
+    /* - Header - */
+    header {
+      background: var(--ink);
+      color: var(--bg);
+      padding: 24px 40px;
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      border-bottom: 3px solid var(--accent);
+    }
+
+    header h1 {
+      font-family: var(--serif);
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    header span {
+      font-size: 12px;
+      color: #a89880;
+      font-style: italic;
+    }
+
+    /* - Auth bar - */
+    #auth-bar {
+      background: #2a211a;
+      color: #a89880;
+      padding: 8px 40px;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    #auth-bar .logged-in { color: #d4c4a8; }
+    #auth-bar .logged-in strong { color: var(--bg); }
+
+    #auth-bar button {
+      background: none;
+      border: 1px solid #4a3f35;
+      color: #a89880;
+      padding: 3px 10px;
+      cursor: pointer;
+      font-family: var(--mono);
+      font-size: 11px;
+      border-radius: 2px;
+      transition: all 0.15s;
+    }
+
+    #auth-bar button:hover { border-color: var(--accent); color: var(--bg); }
+
+    /* - Tabs - */
+    nav {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border);
+      padding: 0 40px;
+      display: flex;
+      gap: 0;
+    }
+
+    nav button {
+      background: none;
+      border: none;
+      border-bottom: 3px solid transparent;
+      padding: 14px 20px;
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--ink-light);
+      cursor: pointer;
+      transition: all 0.15s;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    nav button:hover { color: var(--ink); }
+    nav button.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+    /* - Layout - */
+    main {
+      padding: 32px 40px;
+      max-width: 1100px;
+    }
+
+    .tab { display: none; }
+    .tab.active { display: block; }
+
+    /* - Section heading - */
+    .section-title {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-style: italic;
+      color: var(--ink);
+      margin-bottom: 24px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* - Two-column layout - */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    /* - Cards - */
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 20px;
+    }
+
+    .card h3 {
+      font-family: var(--serif);
+      font-size: 15px;
+      margin-bottom: 14px;
+      color: var(--ink);
+    }
+
+    /* - Forms - */
+    .field { margin-bottom: 12px; }
+
+    label {
+      display: block;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--ink-light);
+      margin-bottom: 4px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 8px 10px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--ink);
+      transition: border-color 0.15s;
+    }
+
+    input:focus, select:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    /* - Buttons - */
+    .btn {
+      display: inline-block;
+      padding: 9px 18px;
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .btn-primary { background: var(--accent); color: white; }
+    .btn-primary:hover { background: #a93226; }
+
+    .btn-secondary {
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--ink-light);
+    }
+    .btn-secondary:hover { border-color: var(--ink); color: var(--ink); }
+
+    .btn-danger { background: none; border: 1px solid #e57373; color: #c62828; }
+    .btn-danger:hover { background: #ffebee; }
+
+    .btn-sm { padding: 5px 10px; font-size: 11px; }
+
+    /* - Tables - */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    th {
+      text-align: left;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--ink-light);
+      padding: 8px 10px;
+      border-bottom: 2px solid var(--border);
+    }
+
+    td {
+      padding: 10px 10px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+    }
+
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: #f0ece2; }
+
+    /* - Status badges - */
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 2px;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 500;
+    }
+
+    .badge-pending  { background: #fff8e1; color: #f57f17; border: 1px solid #ffe082; }
+    .badge-confirmed { background: #e3f2fd; color: #1565c0; border: 1px solid #90caf9; }
+    .badge-paid     { background: #e8f5e9; color: var(--success); border: 1px solid #a5d6a7; }
+
+    /* - Alert messages - */
+    .alert {
+      padding: 10px 14px;
+      border-radius: 3px;
+      font-size: 13px;
+      margin-bottom: 14px;
+    }
+
+    .alert-error   { background: var(--accent-bg); border: 1px solid #e57373; color: #b71c1c; }
+    .alert-success { background: #e8f5e9; border: 1px solid #a5d6a7; color: var(--success); }
+
+    /* - Book grid - */
+    .book-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .book-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 16px;
+      transition: box-shadow 0.15s;
+    }
+
+    .book-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+
+    .book-card .book-title {
+      font-family: var(--serif);
+      font-size: 15px;
+      line-height: 1.3;
+      margin-bottom: 4px;
+    }
+
+    .book-card .book-author {
+      font-size: 12px;
+      color: var(--ink-light);
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+
+    .book-card .book-price {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .book-card .book-meta {
+      font-size: 11px;
+      color: var(--ink-light);
+      margin-bottom: 10px;
+    }
+
+    .book-card .book-stock {
+      font-size: 11px;
+      color: var(--success);
+    }
+
+    .book-card .book-stock.out { color: var(--accent); }
+
+    /* - Active order panel - */
+    #active-order-panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 20px;
+      margin-bottom: 24px;
+    }
+
+    #active-order-panel h3 {
+      font-family: var(--serif);
+      font-size: 15px;
+      margin-bottom: 14px;
+    }
+
+    .order-totals {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      padding: 12px 14px;
+      margin-top: 12px;
+      font-size: 13px;
+    }
+
+    .order-totals .total-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 3px 0;
+    }
+
+    .order-totals .total-row.grand {
+      font-weight: 500;
+      border-top: 1px solid var(--border);
+      margin-top: 6px;
+      padding-top: 8px;
+      font-size: 15px;
+    }
+
+    /* - Invoice detail - */
+    .invoice-detail {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 24px;
+    }
+
+    .invoice-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid var(--ink);
+    }
+
+    .invoice-header .inv-title {
+      font-family: var(--serif);
+      font-size: 24px;
+      font-style: italic;
+    }
+
+    .invoice-header .inv-meta {
+      text-align: right;
+      font-size: 12px;
+      color: var(--ink-light);
+      line-height: 1.8;
+    }
+
+    /* - Misc - */
+    .empty {
+      text-align: center;
+      padding: 40px;
+      color: var(--ink-light);
+      font-style: italic;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 20px 0;
+    }
+
+    .mt { margin-top: 12px; }
+    .gap { display: flex; gap: 8px; flex-wrap: wrap; }
