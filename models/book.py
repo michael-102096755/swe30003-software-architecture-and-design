@@ -1,5 +1,5 @@
 """
-book.py - SWE30003 - Assignment 3 - Gian Tze Ee, 105220081
+book.py - SWE30003 - Assignment 3 - Gian Tze Ee, 105220081 - Michael Attardi, 102096755
 """
 import json
 import uuid
