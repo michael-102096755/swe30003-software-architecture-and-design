@@ -15,7 +15,7 @@
     <span>Online Bookstore — SWE30003 Demo</span>
   </header>
 
-  <!-- Auth status bar -->
+  <!-- Status bar -->
   <div id="auth-bar">
     <span id="auth-status">Not logged in</span>
   </div>
@@ -32,7 +32,7 @@
 
     <!-- - BOOKS TAB - -->
     <div id="tab-books" class="tab active">
-      <p class="section-title">Book Catalogue</p>
+      <p class="section-title">Books</p>
       <div id="book-grid" class="book-grid">
         <p class="empty">Loading books...</p>
       </div>
@@ -51,6 +51,7 @@
           <div class="field"><label>Name *</label><input id="reg-name" type="text" /></div>
           <div class="field"><label>Email *</label><input id="reg-email" type="email" /></div>
           <div class="field"><label>Password *</label><input id="reg-password" type="password" /></div>
+          <div class="field"><label>Confirm Password *</label><input id="reg-confirm-password" type="password" /></div>
           <div class="field"><label>Address</label><input id="reg-address" type="text" /></div>
           <button class="btn btn-primary mt" onclick="registerCustomer()">Register</button>
         </div>

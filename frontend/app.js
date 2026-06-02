@@ -1,4 +1,4 @@
-    // SWE30003 - Assignment 3 - JavaScript for our System's Frontend - Michael Attardi - 102096755 //
+// SWE30003 - Assignment 3 - JavaScript for our System's Frontend - Michael Attardi - 102096755 //
     const API = "http://127.0.0.1:5000";
 
     // App state
@@ -88,10 +88,19 @@
 
     async function registerCustomer() {
       clearMsg("register-msg");
+      const password = document.getElementById("reg-password").value;
+      const confirmPassword = document.getElementById("reg-confirm-password").value;
+
+      // Validate passwords match before sending to the backend
+      if (password !== confirmPassword) {
+        showMsg("register-msg", "Passwords do not match.");
+        return;
+      }
+
       const body = {
         name:     document.getElementById("reg-name").value.trim(),
         email:    document.getElementById("reg-email").value.trim(),
-        password: document.getElementById("reg-password").value,
+        password: password,
         address:  document.getElementById("reg-address").value.trim(),
       };
       const { ok, data } = await api("POST", "/customers/register", body);
