@@ -55,20 +55,25 @@ class Order:
         """
         Adds a book to the order, or increases quantity if already present.
         Expects a Book object and an integer quantity.
+        Returns False if there is insufficient stock, True on success.
         """
-        # Check if this book is already in the order
         for item in self.items:
             if item["book_id"] == book.book_id:
+                if book.stock < item["quantity"] + quantity:
+                    return False
                 item["quantity"] += quantity
-                return
+                return True
 
-        # Otherwise add a new item, snapshotting the title and price
+        if book.stock < quantity:
+            return False
+
         self.items.append({
             "book_id": book.book_id,
             "title": book.title,
             "unit_price": book.price,
             "quantity": quantity
         })
+        return True
 
     def remove_item(self, book_id):
         """Removes an item from the order by book ID."""
@@ -101,17 +106,21 @@ class Order:
     # Status transitions
 
     def confirm(self):
-        """Marks the order as confirmed. Returns False if the order has no items."""
+        """Marks the order as confirmed. Returns False if the order has no items or stock is insufficient."""
         if not self.items:
             return False
-        
-        # Decrement stock for each book in the order
+
         from models.book import Book
+
         for item in self.items:
             book = Book.find_by_id(item["book_id"])
-            if book:
-                book.stock = max(0, book.stock - item["quantity"])
-                book.save()
+            if not book or book.stock < item["quantity"]:
+                return False
+
+        for item in self.items:
+            book = Book.find_by_id(item["book_id"])
+            book.stock -= item["quantity"]
+            book.save()
 
         self.status = "confirmed"
         return True
