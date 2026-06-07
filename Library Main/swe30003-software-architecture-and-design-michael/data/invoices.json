@@ -1,0 +1,65 @@
+[
+  {
+    "invoice_id": "INV0001",
+    "order_id": "ORD0001",
+    "customer_id": "CUST0002",
+    "customer_name": "dennis",
+    "customer_address": "11",
+    "items": [
+      {
+        "book_id": "978-0-7432-7356-5",
+        "title": "The Great Gatsby",
+        "unit_price": 14.99,
+        "quantity": 2,
+        "line_total": 29.98
+      }
+    ],
+    "subtotal": 29.98,
+    "gst": 3.0,
+    "total": 32.98,
+    "created_at": "2026-06-07T22:01:51.794991",
+    "status": "unpaid"
+  },
+  {
+    "invoice_id": "INV0002",
+    "order_id": "ORD0002",
+    "customer_id": "CUST0002",
+    "customer_name": "dennis",
+    "customer_address": "11",
+    "items": [
+      {
+        "book_id": "978-0-7432-7356-5",
+        "title": "The Great Gatsby",
+        "unit_price": 14.99,
+        "quantity": 11,
+        "line_total": 164.89
+      }
+    ],
+    "subtotal": 164.89000000000001,
+    "gst": 16.49,
+    "total": 181.38,
+    "created_at": "2026-06-07T22:02:06.961247",
+    "status": "unpaid"
+  },
+  {
+    "invoice_id": "INV0003",
+    "order_id": "ORD0004",
+    "customer_id": "CUST0002",
+    "customer_name": "dennis",
+    "customer_address": "11",
+    "items": [
+      {
+        "book_id": "978-0-7432-7356-5",
+        "title": "The Great Gatsby",
+        "unit_price": 14.99,
+        "quantity": 3,
+        "line_total": 44.97
+      }
+    ],
+    "subtotal": 44.97,
+    "gst": 4.5,
+    "total": 49.47,
+    "created_at": "2026-06-07T22:02:27.587265",
+    "status": "unpaid"
+  }
+]

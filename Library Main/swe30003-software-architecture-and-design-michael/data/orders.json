@@ -1,0 +1,94 @@
+[
+  {
+    "order_id": "ORD0001",
+    "customer_id": "CUST0002",
+    "items": [
+      {
+        "book_id": "978-0-7432-7356-5",
+        "title": "The Great Gatsby",
+        "unit_price": 14.99,
+        "quantity": 2
+      }
+    ],
+    "status": "paid",
+    "created_at": "2026-06-07T22:01:48.745954",
+    "invoice_id": "INV0001"
+  },
+  {
+    "order_id": "ORD0002",
+    "customer_id": "CUST0002",
+    "items": [
+      {
+        "book_id": "978-0-7432-7356-5",
+        "title": "The Great Gatsby",
+        "unit_price": 14.99,
+        "quantity": 11
+      }
+    ],
+    "status": "paid",
+    "created_at": "2026-06-07T22:02:03.123500",
+    "invoice_id": "INV0002"
+  },
+  {
+    "order_id": "ORD0003",
+    "customer_id": "CUST0002",
+    "items": [
+      {
+        "book_id": "978-0-7432-7356-5",
+        "title": "The Great Gatsby",
+        "unit_price": 14.99,
+        "quantity": 4
+      }
+    ],
+    "status": "pending",
+    "created_at": "2026-06-07T22:02:18.517752",
+    "invoice_id": null
+  },
+  {
+    "order_id": "ORD0004",
+    "customer_id": "CUST0002",
+    "items": [
+      {
+        "book_id": "978-0-7432-7356-5",
+        "title": "The Great Gatsby",
+        "unit_price": 14.99,
+        "quantity": 3
+      }
+    ],
+    "status": "paid",
+    "created_at": "2026-06-07T22:02:24.103218",
+    "invoice_id": "INV0003"
+  },
+  {
+    "order_id": "ORD0005",
+    "customer_id": "CUST0002",
+    "items": [],
+    "status": "pending",
+    "created_at": "2026-06-07T22:07:15.713720",
+    "invoice_id": null
+  },
+  {
+    "order_id": "ORD0006",
+    "customer_id": "CUST0002",
+    "items": [],
+    "status": "pending",
+    "created_at": "2026-06-07T22:07:21.292890",
+    "invoice_id": null
+  },
+  {
+    "order_id": "ORD0007",
+    "customer_id": "CUST0002",
+    "items": [],
+    "status": "pending",
+    "created_at": "2026-06-07T22:07:22.227974",
+    "invoice_id": null
+  },
+  {
+    "order_id": "ORD0008",
+    "customer_id": "CUST0002",
+    "items": [],
+    "status": "pending",
+    "created_at": "2026-06-07T22:11:43.431952",
+    "invoice_id": null
+  }
+]

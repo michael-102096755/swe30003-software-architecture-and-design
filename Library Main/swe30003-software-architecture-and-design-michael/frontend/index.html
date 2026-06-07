@@ -1,0 +1,166 @@
+<!-- SWE30003 - Assignment 3 - HTML Page for our System's Frontend - Michael Attardi - 102096755 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Favourite Books</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Favourite Books</h1>
+    <span>Online Bookstore — SWE30003 Demo</span>
+  </header>
+
+  <!-- Status bar -->
+  <div id="auth-bar">
+    <span id="auth-status">Not logged in</span>
+  </div>
+
+  <!-- Tabs -->
+  <nav>
+    <button class="active" onclick="switchTab('books')">Books</button>
+    <button onclick="switchTab('customers')">Customers</button>
+    <button onclick="switchTab('orders')">Orders</button>
+    <button onclick="switchTab('invoices')">Invoices</button>
+  </nav>
+
+  <main>
+
+    <!-- - BOOKS TAB - -->
+    <div id="tab-books" class="tab active">
+      <p class="section-title">Books</p>
+      <div id="book-grid" class="book-grid">
+        <p class="empty">Loading books...</p>
+      </div>
+
+    </div>
+
+    <!-- - CUSTOMERS TAB - -->
+    <div id="tab-customers" class="tab">
+      <p class="section-title">Customer Accounts</p>
+      <div class="two-col">
+
+        <!-- Register -->
+        <div class="card">
+          <h3>Register New Customer</h3>
+          <div id="register-msg"></div>
+          <div class="field"><label>Name *</label><input id="reg-name" type="text" /></div>
+          <div class="field"><label>Email *</label><input id="reg-email" type="email" /></div>
+          <div class="field"><label>Password *</label><input id="reg-password" type="password" /></div>
+          <div class="field"><label>Confirm Password *</label><input id="reg-confirm-password" type="password" /></div>
+          <div class="field"><label>Address</label><input id="reg-address" type="text" /></div>
+          <button class="btn btn-primary mt" onclick="registerCustomer()">Register</button>
+        </div>
+
+        <!-- Login -->
+        <div class="card">
+          <h3>Login</h3>
+          <div id="login-msg"></div>
+          <div class="field"><label>Email *</label><input id="login-email" type="email" /></div>
+          <div class="field"><label>Password *</label><input id="login-password" type="password" /></div>
+          <div class="gap mt">
+            <button class="btn btn-primary" onclick="loginCustomer()">Log In</button>
+            <button class="btn btn-secondary" onclick="logoutCustomer()">Log Out</button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- - ORDERS TAB - -->
+    <div id="tab-orders" class="tab">
+      <p class="section-title">Orders</p>
+
+      <!-- Active order panel -->
+      <div id="active-order-panel">
+        <h3>Active Order</h3>
+        <div id="order-status-msg"></div>
+        <div id="active-order-content">
+          <p style="color: var(--ink-light); font-style: italic; font-size:13px">
+            Log in and create an order to get started.
+          </p>
+        </div>
+      </div>
+
+      <!-- Book selector -->
+      <div class="two-col">
+        <div class="card">
+          <h3>Add Book to Order</h3>
+          <div id="add-item-msg"></div>
+          <div class="field">
+            <label>Select Book</label>
+            <select id="order-book-select"></select>
+          </div>
+          <div class="field">
+            <label>Quantity</label>
+            <input id="order-qty" type="number" value="1" min="1" />
+          </div>
+          <button class="btn btn-primary mt" onclick="addItemToOrder()">Add to Order</button>
+        </div>
+
+        <div class="card">
+          <h3>Order Actions</h3>
+          <div id="order-action-msg"></div>
+          <p style="font-size:12px; color:var(--ink-light); margin-bottom:14px">
+            Once you're happy with your order, confirm it to generate an invoice.
+            Payment can then be processed on the confirmed order.
+          </p>
+          <div class="gap">
+            <button class="btn btn-primary" onclick="createOrder()">New Order</button>
+            <button class="btn btn-secondary" onclick="confirmOrder()">Confirm Order</button>
+            <button class="btn btn-secondary" onclick="payOrder()">Process Payment</button>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- All orders table -->
+      <p class="section-title">All Orders</p>
+      <div class="card">
+        <table>
+          <thead>
+            <tr>
+              <th>Order ID</th><th>Customer</th><th>Items</th><th>Total</th><th>Status</th><th>Created</th>
+            </tr>
+          </thead>
+          <tbody id="orders-table-body">
+            <tr><td colspan="6" class="empty">Loading...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- - INVOICES TAB - -->
+    <div id="tab-invoices" class="tab">
+      <p class="section-title">Invoices</p>
+
+      <!-- Invoice list -->
+      <div class="card" style="margin-bottom: 24px">
+        <table>
+          <thead>
+            <tr>
+              <th>Invoice ID</th><th>Order ID</th><th>Customer</th><th>Subtotal</th><th>GST</th><th>Total</th><th>Date</th><th></th>
+            </tr>
+          </thead>
+          <tbody id="invoices-table-body">
+            <tr><td colspan="8" class="empty">Loading...</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Invoice detail view -->
+      <div id="invoice-detail-container"></div>
+    </div>
+
+  </main>
+
+  <script src="app.js"></script>
+
+</body>
+</html>

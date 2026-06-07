@@ -1,0 +1,101 @@
+[
+  {
+    "book_id": "978-0-7432-7356-5",
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "isbn": "978-0-7432-7356-5",
+    "publisher": "Scribner",
+    "year": 1925,
+    "price": 14.99,
+    "stock": 0,
+    "category": "Fiction"
+  },
+  {
+    "book_id": "978-0-06-112008-4",
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "isbn": "978-0-06-112008-4",
+    "publisher": "Harper Perennial",
+    "year": 1960,
+    "price": 16.99,
+    "stock": 8,
+    "category": "Fiction"
+  },
+  {
+    "book_id": "978-0-14-028329-7",
+    "title": "1984",
+    "author": "George Orwell",
+    "isbn": "978-0-14-028329-7",
+    "publisher": "Penguin Books",
+    "year": 1949,
+    "price": 13.99,
+    "stock": 13,
+    "category": "Dystopian Fiction"
+  },
+  {
+    "book_id": "978-0-7432-7357-2",
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "isbn": "978-0-7432-7357-2",
+    "publisher": "Penguin Classics",
+    "year": 1813,
+    "price": 12.99,
+    "stock": 5,
+    "category": "Romance"
+  },
+  {
+    "book_id": "978-0-316-76948-0",
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "isbn": "978-0-316-76948-0",
+    "publisher": "Little, Brown and Company",
+    "year": 1951,
+    "price": 15.99,
+    "stock": 7,
+    "category": "Fiction"
+  },
+  {
+    "book_id": "978-0-7432-7358-9",
+    "title": "Brave New World",
+    "author": "Aldous Huxley",
+    "isbn": "978-0-7432-7358-9",
+    "publisher": "Harper Perennial",
+    "year": 1932,
+    "price": 14.49,
+    "stock": 6,
+    "category": "Dystopian Fiction"
+  },
+  {
+    "book_id": "978-0-14-028330-3",
+    "title": "Animal Farm",
+    "author": "George Orwell",
+    "isbn": "978-0-14-028330-3",
+    "publisher": "Penguin Books",
+    "year": 1945,
+    "price": 11.99,
+    "stock": 11,
+    "category": "Political Satire"
+  },
+  {
+    "book_id": "978-0-7432-7359-6",
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "isbn": "978-0-7432-7359-6",
+    "publisher": "HarperOne",
+    "year": 1988,
+    "price": 15.49,
+    "stock": 9,
+    "category": "Adventure"
+  },
+  {
+    "book_id": "978-0-14-028331-0",
+    "title": "Harry Potter and the Philosopher's Stone",
+    "author": "J.K. Rowling",
+    "isbn": "978-0-14-028331-0",
+    "publisher": "Bloomsbury",
+    "year": 1997,
+    "price": 18.99,
+    "stock": 20,
+    "category": "Fantasy"
+  }
+]

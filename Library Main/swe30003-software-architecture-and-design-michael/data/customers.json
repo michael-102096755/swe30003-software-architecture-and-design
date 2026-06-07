@@ -1,0 +1,27 @@
+[
+  {
+    "customer_id": "CUST0001",
+    "name": "John Doe",
+    "email": "johndoe@example.com",
+    "password_hash": "008c70392e3abfbd0fa47bbc2ed96aa99bd49e159727fcba0f2e6abeb3a9d601",
+    "address": "Password123",
+    "order_ids": []
+  },
+  {
+    "customer_id": "CUST0002",
+    "name": "dennis",
+    "email": "Dennis@gmail.com",
+    "password_hash": "bcb15f821479b4d5772bd0ca866c00ad5f926e3580720659cc80d39c9d09802a",
+    "address": "11",
+    "order_ids": [
+      "ORD0001",
+      "ORD0002",
+      "ORD0003",
+      "ORD0004",
+      "ORD0005",
+      "ORD0006",
+      "ORD0007",
+      "ORD0008"
+    ]
+  }
+]
