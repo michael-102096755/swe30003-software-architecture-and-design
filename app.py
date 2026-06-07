@@ -179,7 +179,8 @@ def add_item_to_order(order_id):
         return jsonify({"error": "Book not found"}), 404
 
     quantity = int(data.get("quantity", 1))
-    order.add_item(book, quantity)
+    if not order.add_item(book, quantity):
+        return jsonify({"error": f"Not enough stock for '{book.title}' (available: {book.stock})"}), 400
     order.save()
     return jsonify(order.to_dict())
 
@@ -207,7 +208,7 @@ def confirm_order(order_id):
         return jsonify({"error": "Order not found"}), 404
 
     if not order.confirm():
-        return jsonify({"error": "Order has no items"}), 400
+        return jsonify({"error": "Order could not be confirmed — it may be empty or a book is out of stock"}), 400
 
     order.save()
 
