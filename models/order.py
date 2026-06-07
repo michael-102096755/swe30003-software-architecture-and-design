@@ -104,6 +104,15 @@ class Order:
         """Marks the order as confirmed. Returns False if the order has no items."""
         if not self.items:
             return False
+        
+        # Decrement stock for each book in the order
+        from models.book import Book
+        for item in self.items:
+            book = Book.find_by_id(item["book_id"])
+            if book:
+                book.stock = max(0, book.stock - item["quantity"])
+                book.save()
+
         self.status = "confirmed"
         return True
 
